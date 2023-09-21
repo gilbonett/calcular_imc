@@ -17,19 +17,4 @@ def interpretar_IMC(imc):
         return 'Obesidade Grau II'
     else:
         return 'Obesidade Grau II'
-    
-    #Pega os dados do prompt
-try:
-    peso = float(input('Digite seu peso (kg): '))
-    altura = float(input('Digite sua altura (m): '))
-except ValueError:
-    print('Por favor, insira solo numeros válidos para peso e altura.')
-else:
-    # Calcula o IMC
-    imc = calcular_IMC(peso, altura)
 
-    # Interpreta o IMC
-    interpretacao = interpretar_IMC(imc)
-
-    # Exibe o resultado
-    print(f"Seu IMC é {imc:.2f}, o que significa que você está {interpretacao}.")
