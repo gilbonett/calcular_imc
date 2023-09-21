@@ -1,10 +1,12 @@
-
+.container{
+    width: 15%;
+}
 h1{
     color: red;
 }
 
 body{
-    background-color: black;
+    background-color: rgb(81, 99, 110);
 }
 
 p{
