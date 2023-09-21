@@ -10,10 +10,18 @@
 <body>
     <h1>Comenzado o projeto com flask</h1>
 <div class="container">
-    <form>
+    <form method="POST" action="/imc">
+        <div class="mb-1">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+        </div>
+        <div class="mb-1">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone">
+        </div>
         <div class="mb-1">
             <label for="peso" class="form-label">Peso</label>
-            <input type="text" class="form-control" id="peso" name="peso" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="peso" name="peso">
         </div>
         <div class="mb-1">
             <label for="altura" class="form-label">Altura</label>
@@ -22,6 +30,15 @@
 
         <button type="submit" class="btn btn-primary">Calcular IMC</button>
     </form>
+    {% if imc %}
+    <h2>Resultado do IMC:</h2>
+    <p>Seu IMC é: {{ imc }}</p>
+    <p>{{ interprecao }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p>{{error}}</p> 
+    {% endif %}
 </div>
     
 </body>
