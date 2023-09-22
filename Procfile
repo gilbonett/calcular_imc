@@ -1,2 +1,2 @@
 web: gunicorn main:app
-imc: gunicorn imc:app
+web: gunicorn imc:app
