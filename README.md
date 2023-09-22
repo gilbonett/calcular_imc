@@ -54,7 +54,6 @@ As principais tecnologias utilizadas foram:
 
 <h2 id= Pre>Passo a passo para Rodar o Projeto</h2>
 
-## Passo a passo para Instalar o projeto
 **Para começar, é necessário ter uma IDE para o desenvolvimento do seu projeto, depois criar o diretório que hospedará o código da sua aplicação. Em um terminal, é possível criar com o seguinte código:**
 ```sh
 mkdir nome_do_projeto
