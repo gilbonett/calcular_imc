@@ -8,8 +8,9 @@
     <title>Calculadora de IMC</title>
 </head>
 <body>
-    <h1>Comenzado o projeto com flask</h1>
+    
 <div class="container">
+    <h1>Calculadora de IMC</h1>
     <form method="POST" action="/imc">
         <div class="mb-1">
             <label for="nome" class="form-label">Nome</label>
@@ -21,24 +22,29 @@
         </div>
         <div class="mb-1">
             <label for="peso" class="form-label">Peso</label>
-            <input type="text" class="form-control" id="peso" name="peso">
+            <input type="text" class="form-control" id="peso" name="peso" maxlength="3" placeholder="___">
         </div>
         <div class="mb-1">
             <label for="altura" class="form-label">Altura</label>
-            <input type="text" class="form-control" id="altura" name="altura">
+            <input type="text" class="form-control" id="altura" name="altura" maxlength="4"  placeholder="_.__" >
         </div>
-
         <button type="submit" class="btn btn-primary">Calcular IMC</button>
     </form>
-    {% if imc %}
-    <h2>Resultado do IMC:</h2>
-    <p>Seu IMC é: {{ imc }}</p>
-    <p>{{ interprecao }}</p>
-    {% endif %}
+    <div class="erros">
+        {% if error %}
+            <p>{{error}}</p> 
+        {% endif %}
+    </div>
+    <div class="resultado">
+        {% if imc %}
+            <h2>Resultado do IMC:</h2>
+            <p>{{nome}} seu IMC é: {{ imc }}</p>
+            <p>{{ interpretacao }}</p>
+        {% endif %}
+    </div>
 
-    {% if error %}
-        <p>{{error}}</p> 
-    {% endif %}
+
+    
 </div>
     
 </body>
