@@ -2,7 +2,6 @@
 def calcular_IMC(peso, altura):
      return peso / altura **2
 
-
 #Função para fazer as interpretaçoes do IMC
 def interpretar_IMC(imc):
     if imc < 18.5:
@@ -17,4 +16,3 @@ def interpretar_IMC(imc):
         return 'Obesidade Grau II'
     else:
         return 'Obesidade Grau II'
-
