@@ -1,2 +1,2 @@
-api: gunicorn main:app --bind 0.0.0.0:8000
-static: python -m http.server 8080
+web: gunicorn main:app
+db: gunicorn db:app
