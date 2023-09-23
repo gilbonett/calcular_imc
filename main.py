@@ -9,7 +9,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def home():
     return render_template('index.html', imc= None, interpretacao=None, error=None)
 
-@app.route('/imc', methods=['POST'])
+@app.route('/', methods=['POST'])
 def coletar_dados():
     nome = request.form.get('nome')
     telefone = request.form.get('telefone')
