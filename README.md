@@ -13,7 +13,7 @@
 | :label: Tecnologias Front-end | HTML, Bootstrap
 | :label: Tecnologias Back-end | Python , Flask
 | :label: Banco de Dados | MongoDB
-| :rocket: URL         | https://app/
+| :rocket: URL         | https://calcular-imc.onrender.com/
 | :fire: Desafio     | Calcular indice de masa corporal
 
 <h3>Tópicos</h3>
@@ -64,15 +64,14 @@ Clone o projeto desde o terminal
 git clone https://github.com/gilbonett/calcular_imc.git
 ```
 
-Instalar o framework Flask:
+Instalar as bibliotecas (com esse comando todos as bibliotecas de requirements.txt seram instaladas) :
 ```sh
-$ pip install flask
+$ pip install -r requirements. txt
 ```
 
-Para verificar se o Flask foi instalado corretamente, inicie o interpretador Python e tentando importá-lo:
-```sh
-import flask
-```
+O banco de dados usado foi o mongoDB usei Mongo Atlas pode accesar pelo link https://cloud.mongodb.com/ 
+As informaçoes do banco estão no arquivo db.py
+
 Após isso, você pode rodar a aplicação em modo de desenvolvimento ou usando o comando python com a ruta do arquivo main.py
 
 A aplicação irá rodar no endereço http://localhost](http://127.0.0.1:5000/
