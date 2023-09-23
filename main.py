@@ -49,9 +49,9 @@ def coletar_dados():
                 response = make_response(render_template('index.html', imc=format_imc, interpretacao=interpretacao, nome=nome), 200)
                 colecao = db['dados_imc']
                 colecao.insert_one(dados)
-                
-            
+    
     return response
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
