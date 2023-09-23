@@ -46,11 +46,11 @@ def coletar_dados():
                     'imc':format_imc,
                     'telefone':telefone
                 }
+                response = make_response(render_template('index.html', imc=format_imc, interpretacao=interpretacao, nome=nome), 200)
                 colecao = db['dados_imc']
                 colecao.insert_one(dados)
                 
-                response = make_response(render_template('index.html', imc=format_imc, interpretacao=interpretacao, nome=nome), 200)
-
+            
     return response
 
 if __name__ == '__main__':
